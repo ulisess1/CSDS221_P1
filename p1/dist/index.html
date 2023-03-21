@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - P1</title>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="row mainContainerRow">
+        <div class="col-md-12">
+            <h3>Bootstrap Booking Form:</h3>
+        </div>
+        <div class="col-md-12 well">
+            <span>Fill out the form and click submit when finished...</span>
+        </div>
+    </div>
+    <div class="row mainContainerRow">
+        <!--Container for left side of form-->
+        <div class="col-md-6">
+            <div class="row">
+                <!--User Panel-->
+                <div class="col-md-12">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">User:</div>
+                        <div class="panel-body">
+                            <form class="form-group" spellcheck='false'>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        Username:
+                                    </div>
+                                    <div class="col-md-8" id="userContainer">
+                                        <input type="text" id="user" class="form-control" placeholder="Type username..." name="username">
+                                    </div>
+                                </div>
+                                <div class="row" >
+                                    <div class="col-md-4">
+                                        First Name:
+                                    </div>
+                                    <div class="col-md-8" id="firstNameContainer">
+                                        <input type="text" id="firstName" class="form-control" placeholder="Type first name..." name="fname">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        Last Name:
+                                    </div>
+                                    <div class="col-md-8" id="lastNameContainer">
+                                        <input type="text" id="lastName" class="form-control" placeholder="Type last name..." name="lname">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!--Contact Panel-->
+                <div class="col-md-12">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">Contact:</div>
+                        <div class="panel-body">
+                            <form class="form-group">
+                                <div class="input-group" id="phoneContainer">
+                                    <span class="input-group-addon"><i class="fa fa-phone fa-fw"></i></span>
+                                    <input type="text" id="phone" class="form-control" placeholder="Type phone#..." name="Phone#">
+                                </div>
+                                <div class="input-group" id="faxContainer">
+                                    <span class="input-group-addon"><i class="fa fa-fax fa-fw"></i></span>
+                                    <input type="text" id="fax" class="form-control" placeholder="Type fax#..." name="Fax#">
+                                </div>
+                                <div class="input-group" id="emailContainer">
+                                    <span class="input-group-addon"><i class="fa fa-envelope fa-fw"></i></span>
+                                    <input type="text" id="email" class="form-control" placeholder="Type e-mail..." name="E-mail">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!--Schedule Panel-->
+                <div class="col-md-12">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">Schedule:</div>
+                        <div class="panel-body">
+                            <form class="form-group">
+                                <label for="adults">Adults:</label>
+                                <select class="form-control" id="adults">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select> 
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label for="checkIn">Check-In:</label>
+                                        <input type="date" id="checkIn" class="form-control date-input"></input>
+                                    </div>
+                                    <div class="col-md-6" id="checkOutContainer">
+                                        <label for="checkOut">Check-Out:</label>
+                                        <input type="date" id="checkOut" class="form-control date-input"></input>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label for="daysScheduled">Days:</label>
+                                        <input type="text" id="daysScheduled" placeholder="Displays days..." class="form-control" disabled> 
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="cost">Cost($):</label>
+                                        <input type="text" id="cost" placeholder="Displays cost..." class="form-control" disabled>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Container for right side of form-->
+        <div class="col-md-6">
+            <div class="panel panel-primary">
+                <div class="panel-heading">Other:</div>
+                <div class="panel-body">
+                    <form class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea class="form-control" rows="22" id="message" placeholder="Type message here..."></textarea>
+                        <label for="range">Range:</label>
+                        <input type="range" class="form-control" id="range" min="0" max="5" step="1" value="0">
+                        <label for="priority">Priority:</label>
+                        <div class="radio" id="priority">
+                            <label><input type="radio" name="optradio" value="Low" checked>Low</label>
+                            <label><input type="radio" name="optradio" value="Medium">Medium</label>
+                            <label><input type="radio" name="optradio" value="High">High</label>
+                          </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="row text-right mainContainerRow">
+        <button type="button" id="resetFormBtn" class="btn btn-primary"><i class="fa fa-eraser"></i> Reset</button>
+        <button type="button" id="submitFormBtn" class="btn btn-success"><i class="fa fa-paper-plane"></i> Submit</button>
+    </div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

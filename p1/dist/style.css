@@ -1,0 +1,17 @@
+h3 {
+  color: red; 
+  font-weight: bold;
+}
+
+.mainContainerRow {
+    padding: 0% 1%;
+}
+
+#resetFormBtn {
+    width: 15%;
+}
+
+#submitFormBtn {
+    width: 15%;
+    margin-left: 2%;
+}
